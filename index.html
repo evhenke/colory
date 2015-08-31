@@ -36,7 +36,7 @@
   <div class="container">
     <div id="board" class="noselect">
       <script type="text/template" id="card-template">
-        <div class="card <%= shown ? 'shown' : 'closed' %> <%= color %> <%= found ? 'found' : '' %>"/>
+        <div class="card <%= shown ? 'shown' : 'closed' %> <%= color %> <%= position %> <%= found ? 'found' : '' %>"/>
       </script>
     </div>
 
@@ -45,10 +45,11 @@
         setTimeout(function(){
               $('#board').css('display','block');
               $('#start').css('display','none');
-        },500);">play</button>
+        },500);"> </button>
     </div>
 
     <div id="gameover" class="noselect">
+		<div id="score"> </div>
         <button class="noselect" onclick="$('#pling').get(0).play();
         setTimeout(function(){
               $('#board').css('display','block');

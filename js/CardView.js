@@ -110,9 +110,13 @@ $(function() {
 		  			$("#pling").get(0).play();
 
 		  			if (this.model.collection.where({found: false}).length === 2) {
+                        // The game is finished
 		  				clearInterval(Interval);
 		  				$("#board").css("display","none");
+		  				$("#stats").css("display","none");
 		  				$("#gameover").css("display","block");
+		  				score = this.computeScore();
+		  				$("#score").html(score);
 		  			}
 		  		}
 		  		else { 
@@ -121,6 +125,13 @@ $(function() {
 		  		}
 			}
 		},
+
+        computeScore: function() {
+            var maxScore = 3000;
+            var timeMalus = parseInt($("#seconds").html()) * 100 + parseInt($("#tens").html())
+            var errorMalus = 0 + parseInt($("#errors").html()) * 5
+            return maxScore - timeMalus - errorMalus;
+        },
 
 		render: function() {
 			var tpl = this.template(this.model.attributes);
@@ -141,9 +152,11 @@ $(function() {
 
 	if(window.location.hash) {
     	$('#board').css('display','block');
+    	$('#stats').css('display','inline');
 		$('#start').css('display','none');
 	} else {
 		$('#start').css('display','block');
+        $('#stats').css('display','none');
     	$('#board').css('display','none');
 	}
 
@@ -163,7 +176,6 @@ $(function() {
 		}
 
 		if (hundreds > 9){
-			console.log("seconds");
 			seconds++;
 			appendSeconds.innerHTML = "0" + seconds;
 			hundreds = 0;

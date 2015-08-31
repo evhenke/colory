@@ -3,7 +3,8 @@ var Card = Backbone.Model.extend({
   defaults: {
     color: '',
     shown: false,
-    found: false
+    found: false,
+    position: ''
   }
 });
 
@@ -27,6 +28,11 @@ function fillCardCollection(cardQuantity) {
 		tmpCollection.push(card);
 	}
 	allCards.add(_.shuffle(tmpCollection));
+	allCards.each(function(card, key) {
+        var cardPosition = "p"+key;
+        card.set("position", cardPosition);
+    });
+    
 };
 
 fillCardCollection(4);
