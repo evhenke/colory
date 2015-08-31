@@ -45,8 +45,14 @@ $(function() {
   	// The card view
   	var CardView = Backbone.View.extend({
 	  	template:'',
-	  	className:"slot",
 
+        attributes : function () {
+          return {
+            class : "slot",
+            id : this.model.get( 'position' )
+          };
+        },
+        
 	  	initialize: function() {
 	  		this.template = _.template($("#card-template").html());
 	  		this.model.bind('change', _.bind(this.render, this));
