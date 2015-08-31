@@ -1,0 +1,221 @@
+html, body {
+	font-family: 'cwg_sansregular', Futura, sans-serif;
+	color: #948B89;
+	background-color: #D5D2D2;
+	height: 100%;
+	margin: 0em;
+    overflow:hidden;
+}
+
+header {
+	margin: 1em 2em;
+    width: 100%;
+}
+
+h1 {
+	font-size: 3em;
+	margin: 0;
+}
+
+#stats {
+    width: 100%;
+}
+
+#stats p {
+	font-size: 3em;
+	display: inline-block;
+	margin: 0em 1em 0em 0em;
+}
+
+.container {
+    position: relative;
+    display: inline-flex;
+    min-height: 100%;
+    vertical-align:bottom;
+    margin:0 2em;
+    height:100%;
+    width: 100%;
+}
+
+#board {
+//	display: none;
+    min-height:100%;
+    height:auto !important;
+    height:100%;
+}
+
+#gameover, #start {
+	display: none;
+    min-height: 100%;
+    vertical-align:middle;
+    height:100%;
+  	margin: auto;
+  	//width: 47em;
+}
+
+#start {
+	display: none;
+  	//width: 22.5em;
+}
+
+button {
+	font-family: 'cwg_sansregular', Futura, sans-serif;
+	color: #fff;
+	font-size: 2.5em;
+	border: 0;
+	height: 7em;
+	width: 7em;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	background-color: #1abc9c;
+	margin: 1em;
+	text-decoration: none;
+	overflow: hidden;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+button:hover {
+	background-color: #16a085;
+}
+button:focus {
+	outline:0;
+}
+
+
+footer {
+	position: absolute;
+	bottom: 0px;
+    clear: both;
+	margin: 0em 2em;
+    width: 100%;
+}
+
+#jazz {
+	width: 3em;
+}
+
+
+
+// C A R D S
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+em {
+	font-style: normal;
+}
+
+.slot {
+	display: inline-block;
+}
+
+.card {
+display: inline-block;
+margin: 1.1em;
+border-radius: 50%;
+border: 0.8em solid white;
+height: 9em;
+width: 9em;
+background: #fff;
+  -moz-box-shadow:    0px 0px 1em rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 0px 1em rgba(0, 0, 0, 0.1);
+  box-shadow:         0px 0px 1em rgba(0, 0, 0, 0.1);
+}
+
+
+.color1 {
+	color: #1abc9c;
+}
+
+.color2 {
+	color: #62396D;
+}
+
+.color3 {
+color: #f1c40f; //yellow
+}
+
+.color4 {
+color: #84DCCF;
+}
+
+.color5 {
+color: #e74c3c;
+}
+
+.color6 {
+color: #f39c12; //orange
+}
+
+.color7 {
+color: #3498db;
+}
+
+.color8 {
+color: #2ecc71;
+}
+
+.card1 {
+background: #1abc9c;
+}
+
+.card2 {
+background: #62396D;
+}
+
+.card3 {
+background: #f1c40f; //yellow
+}
+
+.card4 {
+background: #84DCCF;
+}
+
+.card5 {
+background: #e74c3c;
+}
+
+.card6 {
+background: #f39c12; //orange
+}
+
+.card7 {
+background: #3498db;
+}
+
+.card8 {
+background: #2ecc71;
+}
+
+.closed {
+	height: 10.6em;
+	width: 10.6em;
+	border: 0em;
+	background: repeating-linear-gradient(
+	  135deg,
+	  #fff,
+	  #fff 0.8em,
+	  #D5D2D2 0.8em,
+	  #D5D2D2 1.6em
+	);
+}
+
+.found {
+	visibility: hidden;
+}
+
+@font-face {
+    font-family: 'cwg_sansregular';
+    src: url('../fonts/cwg-webfont.eot');
+    src: url('../fonts/cwg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/cwg-webfont.woff2') format('woff2'),
+         url('../fonts/cwg-webfont.woff') format('woff'),
+         url('../fonts/cwg-webfont.ttf') format('truetype'),
+         url('../fonts/cwg-webfont.svg#cwg_sansregular') format('svg');
+}

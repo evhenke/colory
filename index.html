@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">
+
+	<title>Color Memory</title>
+
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/colory.css" type="text/css" charset="utf-8"/>
+	<!--link rel="icon" href="favicon.ico" /-->
+
+  <script src="js/lib/jquery-2.1.3.min.js"></script>
+  <script src="js/lib/underscore-min.js"></script>
+  <script src="js/lib/backbone.js"></script>
+  <script src="js/CardModel.js"></script>
+  <script src="js/CardView.js"></script>
+
+</head>
+
+<body>
+
+<header>
+  <h1>c<em id="o1" class="color1">o</em>l<em id="o2" class="color2">o</em>ry</h1>
+  <audio id="pling" src="audio/pling.mp3"></audio>
+</header>
+
+  <div class="container">
+    <div id="board" class="noselect">
+      <script type="text/template" id="card-template">
+        <div class="card <%= shown ? 'shown' : 'closed' %> <%= color %> <%= found ? 'found' : '' %>"/>
+      </script>
+    </div>
+
+    <div id="start" class="noselect">
+        <button class="noselect" onclick="$('#pling').get(0).play();
+        setTimeout(function(){
+              $('#board').css('display','block');
+              $('#start').css('display','none');
+        },500);">play</button>
+    </div>
+
+    <div id="gameover" class="noselect">
+        <button class="noselect" onclick="$('#pling').get(0).play();
+        setTimeout(function(){
+              $('#board').css('display','block');
+              $('#gameover').css('display','none');
+              window.location.hash = '#direct';
+              location.reload();
+        },500);">play<br />again</button>
+        <button class="noselect" onclick="window.location.reload();">share on<br />twitter</button>
+    </div>
+
+  </div>
+
+    <footer>
+    <div id="stats" >
+        <p id="jazz"><span id="seconds">00</span>:<span id="tens">0</span></p>
+        <p>number of errors: <span id="errors">0</span></p>
+    </div>
+    <div>
+      <small>
+      built by <a href="https://twitter.com/evStyleDesign">@evstyle</a>
+      and <a href="https://twitter.com/aurelient">@aurelient</a>.
+      </small>
+    </div>
+    </footer>
+
+</body>
+
+<!-- Start of Google Analytics -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38100782-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- End of GoogleAnalytics -->
+
+</html>
+
