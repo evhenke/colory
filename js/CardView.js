@@ -82,7 +82,7 @@ $(function() {
 					// change colors of O in the title and of button PlayAgain at GameOver
 					var color = this.model.get("color");
 					$('#o2').attr( "class", color.replace("card", "color"));
-					$('#playagain').attr( "class", color.replace("card", "color"));
+					$('#score').attr( "class", color.replace("card", "color"));
 					this.flip();
 					break;
 				default : 
