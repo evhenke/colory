@@ -35,4 +35,4 @@ function fillCardCollection(cardQuantity) {
     
 };
 
-fillCardCollection(4);
+fillCardCollection(9);

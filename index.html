@@ -29,7 +29,7 @@
 <body>
 
 <header>
-  <h1>c<em id="o1" class="color1">o</em>l<em id="o2" class="color2">o</em>ry</h1>
+  <h1 class="logo">c<em id="o1" class="color1">o</em>l<em id="o2" class="color2">o</em>ry</h1>
   <audio id="pling" src="audio/pling.mp3"></audio>
 </header>
 
@@ -39,9 +39,8 @@
         <div class="card <%= shown ? 'shown' : 'closed' %> <%= color %> <%= found ? 'found' : '' %>"/>
       </script>
     </div>
-
     <div id="start" class="noselect">
-        <button class="noselect" onclick="$('#pling').get(0).play();
+        <button class="noselect pulse-anim" onclick="$('#pling').get(0).play();
         setTimeout(function(){
               $('#board').css('display','block');
               $('#start').css('display','none');
@@ -50,14 +49,14 @@
 
     <div id="gameover" class="noselect">
 		<div id="score"> </div>
-        <button class="noselect" onclick="$('#pling').get(0).play();
+        <button class="noselect pulse-anim" id="playagain" onclick="$('#pling').get(0).play();
         setTimeout(function(){
               $('#board').css('display','block');
               $('#gameover').css('display','none');
               window.location.hash = '#direct';
               location.reload();
-        },500);">play<br />again</button>
-        <button class="noselect" onclick="window.location.reload();">share on<br />twitter</button>
+        },500);"></button> <br />
+        <h2><a id="playagain" class="color1" href="window.location.reload();">share on twitter</a></h2>
     </div>
 
   </div>
