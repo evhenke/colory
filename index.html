@@ -5,7 +5,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">
 
-	<title>Color Memory</title>
+	<title>Colory</title>
 
 
   <!-- Mobile Specific Metas
@@ -44,6 +44,7 @@
         setTimeout(function(){
               $('#board').css('display','block');
               $('#start').css('display','none');
+			  $('#stats').css('display','inline');
         },500);"> </button>
     </div>
 
@@ -56,7 +57,8 @@
               window.location.hash = '#direct';
               location.reload();
         },500);"></button> <br />
-        <h2><a id="playagain" class="color1" href="window.location.reload();">share on twitter</a></h2>
+		<h2><a id="twitter" class="" href="">share on Twitter</a></h2>
+		<h2><a id="facebook" class="" href="https://www.facebook.com/sharer/sharer.php?u=http://evhenke.github.io/colory">share on Facebook</a></h2>
     </div>
 
   </div>
@@ -64,7 +66,7 @@
     <footer>
     <div id="stats" >
         <p id="jazz"><span id="seconds">00</span>:<span id="tens">0</span></p>
-        <p>number of errors: <span id="errors">0</span></p>
+        <!--p>number of errors: <span id="errors">0</span></p-->
     </div>
     <div>
       <small>

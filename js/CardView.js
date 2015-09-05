@@ -126,6 +126,8 @@ $(function() {
 		  				$("#gameover").css("display","block");
 		  				score = this.computeScore();
 		  				$("#score").html(score);
+		  				
+		  				$("#twitter").attr("href", "https://twitter.com/home?status=I scored " + score + " on Colory http://evhenke.github.io/colory")
 		  			}
 		  		}
 		  		else { 
@@ -138,7 +140,7 @@ $(function() {
         computeScore: function() {
             var maxScore = 3000;
             var timeMalus = parseInt($("#seconds").html()) * 100 + parseInt($("#tens").html())
-            var errorMalus = 0 + parseInt($("#errors").html()) * 5
+            var errorMalus = 0 + errors * 5
             return maxScore - timeMalus - errorMalus;
         },
 
