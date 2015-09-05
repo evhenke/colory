@@ -138,7 +138,7 @@ $(function() {
 		},
 
         computeScore: function() {
-            var maxScore = 3000;
+            var maxScore = 5000;
             var timeMalus = parseInt($("#seconds").html()) * 100 + parseInt($("#tens").html())
             var errorMalus = 0 + errors * 5
             return maxScore - timeMalus - errorMalus;
