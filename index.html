@@ -38,7 +38,6 @@
       <script type="text/template" id="card-template">
         <div class="card <%= shown ? 'shown' : 'closed' %> <%= color %> <%= found ? 'found' : '' %>"/>
       </script>
-    </div>
     <div id="start" class="noselect">
         <button class="noselect pulse-anim" onclick="$('#pling').get(0).play();
         setTimeout(function(){
@@ -48,9 +47,8 @@
         },500);"> </button>
     </div>
 
-    <div id="gameover" class="noselect">
-		<div id="score"> </div>
-        <button class="noselect pulse-anim" id="playagain" onclick="$('#pling').get(0).play();
+    <div id="gameover" class="noselect pulse-anim">
+        <button class="noselect pulse-anim" id="score" onclick="$('#pling').get(0).play();
         setTimeout(function(){
               $('#board').css('display','block');
               $('#gameover').css('display','none');
