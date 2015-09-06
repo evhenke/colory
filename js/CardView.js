@@ -130,7 +130,7 @@ $(function() {
             			$('button').attr("class", color.replace("color"));
             			$('.socialmedia').attr( "class", color.replace("card", "color"));
 		  				
-		  				$("#twitter").attr("href", "https://twitter.com/home?status=I scored " + score + " on Colory http://evhenke.github.io/colory/")
+		  				$("#twitter").attr("href", "https://twitter.com/home?status=I completed Colory in " + score + " http://evhenke.github.io/colory/")
 		  			}
 		  		}
 		  		else { 
@@ -141,10 +141,13 @@ $(function() {
 		},
 
         computeScore: function() {
-            var maxScore = 5000;
-            var timeMalus = parseInt($("#seconds").html()) * 100 + parseInt($("#tens").html())
-            var errorMalus = 0 + errors * 5
-            return maxScore - timeMalus - errorMalus;
+            //var maxScore = 5000;
+            //var timeMalus = parseInt($("#seconds").html()) * 100 + parseInt($("#tens").html())
+            //var errorMalus = 0 + errors * 5
+            //return maxScore - timeMalus - errorMalus;
+            
+            var time = "" + $("#seconds").html() + ":" + $("#tens").html()
+            return time;
         },
 
 		render: function() {
