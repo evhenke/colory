@@ -130,7 +130,7 @@ $(function() {
             			$('button').attr("class", color.replace("color"));
             			$('.socialmedia').attr( "class", color.replace("card", "color"));
 		  				
-		  				$("#twitter").attr("href", "https://twitter.com/home?status=I scored " + score + " on Colory http://evhenke.github.io/colory")
+		  				$("#twitter").attr("href", "https://twitter.com/home?status=I scored " + score + " on Colory http://evhenke.github.io/colory/")
 		  			}
 		  		}
 		  		else { 
