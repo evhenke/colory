@@ -79,10 +79,9 @@ $(function() {
 					this.flip();
 					break;
 				case 1 : 
-					// change colors of O in the title and of button PlayAgain at GameOver
+					// change colors of O in the title
 					var color = this.model.get("color");
 					$('#o2').attr( "class", color.replace("card", "color"));
-					$('#score').attr( "class", color.replace("card", "color"));
 					this.flip();
 					break;
 				default : 
@@ -126,6 +125,10 @@ $(function() {
 		  				$("#gameover").css("display","block");
 		  				score = this.computeScore();
 		  				$("#score").html(score);
+		  				// change colors of PlayAgain button in GameOver
+		  				var color = this.model.get("color");
+            			$('button').attr("class", color.replace("color"));
+            			$('.socialmedia').attr( "class", color.replace("card", "color"));
 		  				
 		  				$("#twitter").attr("href", "https://twitter.com/home?status=I scored " + score + " on Colory http://evhenke.github.io/colory")
 		  			}

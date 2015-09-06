@@ -1,7 +1,7 @@
 html, body {
 	font-family: 'cwg_sansregular', Futura, sans-serif;
 	color: #948B89;
-	background-color: #D5D2D2;
+	background-color: #E6E3E1;
 	height: 100%;
 	margin: 0em;
   overflow: hidden;
@@ -112,8 +112,7 @@ button {
 	border: 0;
 	height: 7em;
 	width: 7em;
-  position: relative;
-  top: 30%;
+  margin-top: 15%;
 	border-radius: 50%;
 	-webkit-border-radius: 50%;
 	background-color: #1abc9c;
@@ -123,10 +122,14 @@ button {
 }
 
 button:hover {
-	background-color: #16a085;
+	opacity: 0.75;
 }
 button:focus {
 	outline:0;
+}
+
+.socialmedia {
+  position: relative;
 }
 
 a {
@@ -134,17 +137,18 @@ a {
 	color: #948B89;}
 
 a:hover {
-	color: #16A085;
+	opacity: 0.85;
 }
 
 footer {
 	position: absolute;
 	bottom: 8px;
-    clear: both;
+  clear: both;
 	margin: 0em 2em;
-    width: 100%;
-    text-align: center;
-    color: #aaa;
+  width: 100%;
+  text-align: center;
+  color: #aaa;
+  z-index: 100;
 }
 
 #jazz {
