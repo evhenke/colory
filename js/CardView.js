@@ -146,7 +146,7 @@ $(function() {
             //var errorMalus = 0 + errors * 5
             //return maxScore - timeMalus - errorMalus;
             
-            var time = "" + $("#seconds").html() + ":" + $("#tens").html()
+            var time = "" + $("#seconds").html() + '"' + $("#tens").html()
             return time;
         },
 
