@@ -53,6 +53,10 @@ h1 {
   animation:         pulse 4s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95); /* IE 10+, Fx 29+ */
 }
 
+.chart { display: inline-block;}
+  .text { font-weight: 400; color: #333; line-height: 150%; padding-top: 5px;}
+  /* set arc path stroke to background color */
+.pie path { stroke: #E6E3E1 !important }
 
 // END OF ANIMATION
 
@@ -241,18 +245,14 @@ color: #EB778F; //pig
 }
 
 .color13 {
-color: #939598; //silver
-}
-
-.color14 {
 color: #B92645; //bordeaux
 }
 
-.color15 {
+.color14 {
 color: #58595B; //dark grey
 }
 
-.color16 {
+.color15 {
 color: #5D4199; //dark violet
 }
 
@@ -305,18 +305,14 @@ background: #EB778F; //pig
 }
 
 .card13 {
-background: #939598; //silver
-}
-
-.card14 {
 background: #B92645; //bordeaux
 }
 
-.card15 {
+.card14 {
 background: #58595B; //dark grey
 }
 
-.card16 {
+.card15 {
 background: #5D4199; //dark violet
 }
 
@@ -355,4 +351,48 @@ margin-left: 6em;
          url('../fonts/cwg-webfont.woff') format('woff'),
          url('../fonts/cwg-webfont.ttf') format('truetype'),
          url('../fonts/cwg-webfont.svg#cwg_sansregular') format('svg');
+}
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?ym7dzx');
+	src:url('../fonts/icomoon.eot?#iefixym7dzx') format('embedded-opentype'),
+		url('../fonts/icomoon.ttf?ym7dzx') format('truetype'),
+		url('../fonts/icomoon.woff?ym7dzx') format('woff'),
+		url('../fonts/icomoon.svg?ym7dzx#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook:before {
+	content: "\e602";
+}
+.icon-facebook2:before {
+	content: "\e600";
+}
+.icon-facebook3:before {
+	content: "\e603";
+}
+.icon-twitter:before {
+	content: "\e601";
+}
+.icon-twitter2:before {
+	content: "\e604";
+}
+.icon-twitter3:before {
+	content: "\e605";
 }
