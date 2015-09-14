@@ -122,11 +122,15 @@ $(function() {
 		  				clearInterval(Interval);
 		  				$("#board").css("display","none");
 		  				$("#stats").css("display","none");
+		                $('#credits').css('display','block');
 		  				$("#gameover").css("display","block");
 		  				score = this.computeScore();
 		  				$("#score").html(score);
 		  				// change colors of PlayAgain button in GameOver
 		  				var color = this.model.get("color");
+		  				if (parseInt($("#seconds").html()) > 30) {
+		  				    color = "card7"
+		  				}
             			$('button').attr("class", color.replace("color"));
             			$('.socialmedia').attr( "class", color.replace("card", "color"));
 		  				
@@ -171,10 +175,12 @@ $(function() {
     	$('#board').css('display','block');
     	$('#stats').css('display','inline');
 		$('#start').css('display','none');
+		$('#credits').css('display','none');
 	} else {
 		$('#start').css('display','block');
         $('#stats').css('display','none');
     	$('#board').css('display','none');
+		$('#credits').css('display','none');
 	}
 
 

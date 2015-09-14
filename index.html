@@ -23,6 +23,8 @@
   <script src="js/lib/backbone.js"></script>
   <script src="js/CardModel.js"></script>
   <script src="js/CardView.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+  <script src="js/fancycharts.js"></script>
 
 </head>
 
@@ -56,8 +58,11 @@
               window.location.hash = '#direct';
               location.reload();
         },500);"></button> <br /><br />
-		<h2><a id="twitter" class="socialmedia" href="">share on twitter</a></h2>
-		<h2><a id="facebook" class="socialmedia" href="https://www.facebook.com/sharer/sharer.php?u=http://evhenke.github.io/colory/">share on facebook</a></h2>
+		<h2>
+			<a id="twitter" class="socialmedia" href=""><span class="icon-twitter"></span></a> 
+			&nbsp;&nbsp;&nbsp;
+			<a id="facebook" class="socialmedia" href="https://www.facebook.com/sharer/sharer.php?u=http://evhenke.github.io/colory/"><span class="icon-facebook2"></a>
+		</h2>
     </div>
 
   </div>
@@ -67,7 +72,8 @@
         <p id="jazz"><span id="seconds">00</span>"<span id="tens">0</span></p>
         <!--p>number of errors: <span id="errors">0</span></p-->
     </div>
-    <div>
+
+    <div id="credits">
       <small>
       built by <a href="https://twitter.com/evStyleDesign">@evstyle</a>
       and <a href="https://twitter.com/aurelient">@aurelient</a>.
@@ -76,6 +82,7 @@
     </footer>
 
 </body>
+
 
 <!-- Start of Google Analytics -->
 <script type="text/javascript">
