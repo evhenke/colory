@@ -127,6 +127,7 @@ $(function() {
 		  				$("#stats").css("display","none");
 		                $('#credits').css('display','block');
 		  				$("#gameover").css("display","block");
+		  				$(".countdown-30").addClass("paused");
 		  				score = this.computeScore();
 		  				$("#score").html(score);
 		  				// change colors of PlayAgain button in GameOver
