@@ -16,6 +16,8 @@ $(function() {
 			//var cardsOnBoard = this.collection.where({shown: true, found: false});
 			//console.log(flippedCards.length);
 			if (!started) {
+			    console.log("game started");
+				$('.container').append("<div class='countdown-30'></div>");
 				Interval = setInterval(startTimer, 100);
 				started = true;
 			}
@@ -39,6 +41,7 @@ $(function() {
 		      // its output ("el")
 		      this.$el.append( cardView.render() );
 		  }, this);
+
 		}
 	});
 
@@ -211,7 +214,7 @@ $(function() {
 
 	}
 
-	var countdown-timer = getElementByClass("countdown-30");
+	//var countdown-timer = getElementByClass("countdown-30");
 
 });
 

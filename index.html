@@ -58,7 +58,6 @@
 </header>
 
   <div class="container">
-  <div class="countdown-30"></div>
     <div id="board" class="noselect">
       <script type="text/template" id="card-template">
         <div class="card <%= shown ? 'shown' : 'closed' %> <%= color %> <%= found ? 'found' : '' %>"/>
@@ -67,9 +66,9 @@
     <div id="start" class="noselect">
         <button class="noselect pulse-anim" onclick="$('#pling').get(0).play();
         setTimeout(function(){
-              $('#board').css('display','block');
-              $('#start').css('display','none');
-			  $('#stats').css('display','inline');
+			$('#board').css('display','block');
+			$('#start').css('display','none');
+			$('#stats').css('display','inline');
         },500);"> </button>
     </div>
 
