@@ -17,7 +17,8 @@ $(function() {
 			//console.log(flippedCards.length);
 			if (!started) {
 			    console.log("game started");
-				$('.container').append("<div class='countdown-30'></div>");
+				$('.container').append("<div class='countdown-30 change-to-red'></div>");
+				$('#stats p').addClass("countdown-text");
 				Interval = setInterval(startTimer, 100);
 				started = true;
 			}

@@ -108,7 +108,7 @@ h1 {
 }
 
 #credits {
-    margin-bottom: 5px;
+    margin-bottom: 1.4em;
 }
 
 @-webkit-keyframes change-to-red {
@@ -133,11 +133,14 @@ h1 {
 	display: inline-block;
 	margin: 0;
 	text-align: center;
-	color: #F04F25;
-	-webkit-animation: change-to-red 30s linear; /* Safari 4+ */
-  	-moz-animation:    change-to-red 30s linear; /* Fx 5+ */
-  	-o-animation:      change-to-red 30s linear; /* Opera 12+ */
-  	animation:         change-to-red 30s linear; /* IE 10+, Fx 29+ */
+	/*color: #F04F25;*/
+}
+
+.countdown-text {
+    -webkit-animation: change-to-red 30s forwards linear; /* Safari 4+ */
+    -moz-animation:    change-to-red 30s forwards linear; /* Fx 5+ */
+    -o-animation:      change-to-red 30s forwards linear; /* Opera 12+ */
+    animation:         change-to-red 30s forwards linear; /* IE 10+, Fx 29+ */
 }
 
 .container {
@@ -434,6 +437,7 @@ margin-left: 6em;
 }
 
 [class^="icon-"], [class*=" icon-"] {
+    font-size: 2em;
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
