@@ -1,10 +1,11 @@
 html, body {
 	font-family: 'cwg_sansregular', Futura, sans-serif;
 	color: #948B89;
-	background-color: #E6E3E1;
+	background-color: #edeae8;
 	height: 100%;
 	margin: 0em;
-  overflow: hidden;
+  	overflow: hidden;
+  	position: relative;
 }
 
 header {
@@ -52,16 +53,67 @@ h1 {
   -o-animation:      pulse 4s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95); /* Opera 12+ */
   animation:         pulse 4s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95); /* IE 10+, Fx 29+ */
 }
-
-.chart { display: inline-block;}
-  .text { font-weight: 400; color: #333; line-height: 150%; padding-top: 5px;}
-  /* set arc path stroke to background color */
-.pie path { stroke: #E6E3E1 !important }
-
 // END OF ANIMATION
+
+
+// COUNTDOWN ANIMATION
+
+#stage {
+    position: relative;
+}
+
+.countdown-30 {
+	position: absolute;
+	bottom: 1em;
+	left: 0;
+	width:100%;
+	height: 0.25em;
+	background: #F04F25;
+
+	-webkit-animation: countdown-30 30s forwards linear; /* Safari 4+ */
+  	-moz-animation:    countdown-30 30s forwards linear; /* Fx 5+ */
+  	-o-animation:      countdown-30 30s forwards linear; /* Opera 12+ */
+  	animation:         countdown-30 30s forwards linear; /* IE 10+, Fx 29+ */
+}
+
+@-webkit-keyframes countdown-30 {
+    0% { -webkit-transform:  translate(-100%, 0px); background: #CDC7C5; }
+  100% { -webkit-transform:  translate(0px, 0px); background: #F04F25; }
+}
+@-moz-keyframes countdown-30 {
+  0% { -moz-transform:  translate(-100%, 0px); background: #CDC7C5; }
+  100% { -moz-transform:  translate(0px, 0px); background: #F04F25; }
+}
+@-o-keyframes countdown-30 {
+  0% { -o-transform:  translate(-100%, 0px); background: #CDC7C5; }
+  100% { -o-transform:  translate(0px, 0px); background: #F04F25; }
+}
+@keyframes countdown-30 {
+  0% { transform:  translate(-100%, 0px); background: #CDC7C5; }
+  100% { transform:  translate(0px, 0px); background: #F04F25; }
+}
+
+// END OF COUNTDOWN
 
 #stats {
     width: 100%;
+}
+
+@-webkit-keyframes change-to-red {
+    0% { color: #CDC7C5; }
+  100% { color: #F04F25; }
+}
+@-moz-keyframes change-to-red {
+  0% { color: #CDC7C5; }
+  100% { color: #F04F25; }
+}
+@-o-keyframes change-to-red {
+  0% { color: #CDC7C5; }
+  100% { color: #F04F25; }
+}
+@keyframes change-to-red {
+  0% { color: #CDC7C5; }
+  100% { color: #F04F25; }
 }
 
 #stats p {
@@ -69,6 +121,11 @@ h1 {
 	display: inline-block;
 	margin: 0;
 	text-align: center;
+	color: #F04F25;
+	-webkit-animation: change-to-red 30s linear; /* Safari 4+ */
+  	-moz-animation:    change-to-red 30s linear; /* Fx 5+ */
+  	-o-animation:      change-to-red 30s linear; /* Opera 12+ */
+  	animation:         change-to-red 30s linear; /* IE 10+, Fx 29+ */
 }
 
 .container {
